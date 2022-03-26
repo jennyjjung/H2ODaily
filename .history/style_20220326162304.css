@@ -24,15 +24,8 @@
 
 body {
   margin: 0;
-  font-family: "Open Sans";
+  font-family: "Unica One";
   cursor: default;
-}
-
-h1 {
-  font-size: var(--font-large);
-  font-weight: var(--weight-bold);
-  color: var(--color-black);
-  margin: 16px 0px;
 }
 
 p {
