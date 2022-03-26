@@ -5,7 +5,7 @@
   --color-dark-grey: #4d4d4d;
   --color-blue: #daedec;
   --color-dark-blue: #b9d8d6;
-  --color-yellow: rgb(241, 247, 208);
+  --color-yellow: rgb(238, 247, 186);
 
   /* Font weight */
   --weight-bold: 700;
@@ -93,7 +93,7 @@ a {
 
 /* Home */
 #home {
-  padding: 150px 40px 100px 40px;
+  padding: 150px 40px 120px 40px;
 }
 
 .home__title {
@@ -136,10 +136,5 @@ a {
 /* About */
 #about {
   background-color: var(--color-yellow);
-  padding: 50px 40px 120px 40px;
-}
-
-/* Contact */
-#contact {
   padding: 50px 40px 120px 40px;
 }
