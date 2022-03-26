@@ -83,16 +83,13 @@ a {
   padding: 8px 12px;
   margin: 0 4px;
   cursor: pointer;
+  border: 1px solid transparent;
   border-radius: var(--size-border-radius);
-}
-
-.navbar__menu__item:hover {
-  background-color: var(--color-dark-blue);
 }
 
 /* Home */
 #home {
-  padding: 150px 40px 120px 40px;
+  padding: 120px 40px;
   text-align: center;
 }
 
