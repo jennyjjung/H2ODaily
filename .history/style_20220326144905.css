@@ -1,0 +1,70 @@
+/* Global */
+:root {
+  /* Color */
+  --color-white: #ffffff;
+  --color-light-white: #eeeeee;
+  --color-dark-white: #bdbdbd;
+  --color-pink: #fe918d;
+  --color-dark-pink: #ff6863;
+  --color-dark-grey: #4d4d4d;
+  --color-grey: #616161;
+  --color-light-grey: #7c7979;
+  --color-blue: #73aace;
+  --color-yellow: #fff7d1;
+  --color-orange: #feb546;
+  --color-black: #000000;
+
+  /* Font weight */
+  --weight-bold: 700;
+  --weight-semi-bold: 600;
+  --weight-regular: 400;
+
+  /* Font Size */
+  --font-large: 48px;
+  --font-medium: 28px;
+  --font-regular: 18px;
+  --font-small: 16px;
+  --font-micro: 14px;
+
+  /* Size */
+  --size-border-radius: 4px;
+}
+
+body {
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  cursor: default;
+}
+
+p {
+  font-size: var(--font-regular);
+  font-weight: var(--weight-regular);
+  color: var(--color-black);
+  margin: 4px 0;
+}
+
+/* Navbar */
+#navbar {
+  width: 100%;
+  background-color: var(--color-blue);
+  color: var(--color-white);
+  padding: 16px;
+}
+
+/* Home */
+#home {
+  padding: 40px;
+  padding-top: 120px;
+  text-align: center;
+}
+
+.home__logo {
+  width: 250px;
+  height: 250px;
+  border: 2px solid var(--color-light-white);
+}
+
+#bottom {
+  background-color: var(--color-blue);
+  padding: 20px;
+}
