@@ -1,85 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>H2O Daily</title>
-  <link href='https://fonts.googleapis.com/css?family=Unica One' rel='stylesheet'>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
-  <script src="main.js" defer></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>H2O Daily</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Unica One"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="main.js" defer></script>
 
-  <style>
-      img {
-          width:100px; 
-          height:100px; 
-        }
+    <style>
       .reminder__container {
-          display: flex;
-          flex-wrap: wrap;
-          justify-content: center;     
-        }
-        .checkmark__container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;  
-            margin: 10px 0px 20px 0px;
-        }
-        .checkbox {
-            margin: 5px 43px 20px 45px;
-        }
-        .para__container {
-            text-align: center;
-            padding: 10px;
-            font-size: var(--font-regular);
-            font-weight: var(--weight-bold);
-        }
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .checkmark__container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 10px 0px 20px 0px;
+      }
+      .checkbox {
+        margin: 5px 43px 20px 45px;
+      }
+      .para__container {
+        text-align: center;
+        padding: 10px;
+        font-size: var(--font-regular);
+        font-weight: var(--weight-bold);
+      }
 
-        .submit {
-            color: var(--color-dark-grey);
-            background-color: var(--color-blue);
-            font-size: var(--font-regular);
-            font-weight: var(--weight-bold);
-            font-family: "Unica One";
-            border-radius: 5px;
-            border-color: var(--color-blue);
-            display: block;
-            margin: 50px auto;
-        }
-  </style>
-</head>
-<body>
+      .submit {
+        color: var(--color-dark-grey);
+        background-color: var(--color-blue);
+        font-size: var(--font-regular);
+        font-weight: var(--weight-bold);
+        font-family: "Unica One";
+        border-radius: 5px;
+        border-color: var(--color-blue);
+        display: block;
+        margin: 50px auto;
+      }
 
-  <nav id="navbar">
-    <div class="navbar__container">
-      <img src="images/logo.png" alt="H2O daily Logo" class="logo"/>
-    </div>
-  </nav>
+      h1 {
+        font-family: "Unica One";
+        color: var(--color-dark-grey);
+        font-size: var(--font-medium);
+      }
 
-  <section id="reminder">
-    <div class="para__container">
-      <p> Water  </p>
-    </div>
+      .modal__container {
+        position: fixed;
+        display: block;
+        margin: auto;
+        justify-content: center;
+        align-items: center;
+        width: 500px;
+        height: 300px;
+        background-color: aliceblue;
+        border-radius: 10px;
+        opacity: 0;
+        pointer-events: none;
+      }
 
-    <div class= "reminder__container" id="reminder__container">
-      <!--watercup images-->
-    </div>
+      .modal__container.show {
+        pointer-events: auto;
+        opacity: 1;
+      }
 
-    <div class="checkmark__container" id="checkmark__container">
-      <!--checkboxes-->  
-      
-    </div>
+      .okay__btn {
+        margin: 5px 5px 20px 5px;
+        display: block;
+        margin: 10px auto;
+      }
+    </style>
+  </head>
+  <body>
+    <nav id="navbar">
+      <div class="navbar__logo">
+        <a href="index.html"><img src="images/logo.png" id="navbar__logo" /></a>
+      </div>
+      <div class="navbar__menu">
+        <li class="navbar__menu__item"><a href="index.html">Home</a></li>
+        <li class="navbar__menu__item"><a href="about.html">About</a></li>
+        <li class="navbar__menu__item"><a href="contact.html">Contact</a></li>
+      </div>
+    </nav>
 
-    <input type="button" value="I drank!" id="submit" class="submit"/>
+    <section id="home">
+      <div class="para__container">
+        <h1>Have you drank your water today?</h1>
+      </div>
 
-  </section>
+      <div class="modal__container" id="modal__container">
+        <div class="modal__content" id="modal__content">
+          <h1>Time to drink your water!</h1>
+          <p>
+            Hammy is here to let you know that it is time to drink your water to
+            stay hydrated throughout the day! Please drink a cup of water and
+            check off the water cup you drank!
+          </p>
+        </div>
+        <input type="button" value="Okay!" id="okay__btn" class="okay__btn" />
+      </div>
 
-  <section id="bottom">
-    <div class= "bottom__container">
-      <p class="bottom__rights">&copy; Team Hamstarz 2022 HooHacks - All rights reserved</p>
-    </div>
-  </section>
-  <a href="setting.html">Setting</a>
-</body>
+      <div class="reminder__container" id="reminder__container">
+        <!--watercup images-->
+      </div>
+
+      <div class="checkmark__container" id="checkmark__container">
+        <!--checkboxes-->
+      </div>
+
+      <input type="button" value="I drank!" id="submit" class="submit" />
+    </section>
+
+    <section id="bottom">
+      <div class="bottom__container">
+        <p class="bottom__rights">2022 HooHacks - All rights reserved</p>
+      </div>
+    </section>
+  </body>
 </html>
