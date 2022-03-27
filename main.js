@@ -114,6 +114,7 @@ submit.addEventListener("click", drinkWater);
 let modal = document.getElementById("modal__container");
 const close = document.getElementById('okay__btn');
 
+//Modal referenced from source [3]
 const timer = setInterval(function() {
     modal.classList.add("show");
     }, timeCount);
