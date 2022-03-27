@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Settings</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Unica One"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="main.js" defer></script>
+
+    <!-- CSS Style for Settings Page-->
+    <style>
+      .home__container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        row-gap: 20px;
+      }
+
+      .settings__title {
+        font-family: "Unica One";
+        color: var(--color-dark-grey);
+      }
+
+      #cup {
+        width: 50px;
+        height: 80px;
+        padding-block: 20px;
+        padding-right: 2rem;
+      }
+
+      select {
+        width: 20%;
+        margin: auto;
+        height: 40px;
+        font-weight: bold;
+        color: var(--color-dark-grey);
+        background-color: var(--color-blue);
+        font-size: var(--font-regular);
+        font-weight: var(--weight-bold);
+        font-family: "Unica One";
+        border-radius: var(--size-border-radius);
+      }
+
+      .btn__ready {
+        color: var(--color-dark-grey);
+        background-color: var(--color-white);
+        font-size: var(--font-regular);
+        font-weight: var(--weight-bold);
+        font-family: "Unica One";
+        margin: 24px;
+        padding: 8px 16px;
+        border-radius: var(--size-border-radius);
+        width: 220px;
+      }
+
+      .btn__ready:hover {
+        color: var(--color-dark-blue);
+        background-color: var(--color-dark-grey);
+      }
+    </style>
+  </head>
+  <body>
+    <nav id="navbar">
+      <div class="navbar__container"></div>
+    </nav>
+
+    <section id="home">
+      <div class="home__container">
+        <div class="time__container">
+          <h1 class="settings__title">Hammie Will Remind You Every:</h1>
+          <div class="time">
+            <select class="dd__list">
+              <option>30 minutes</option>
+              <option>60 minutes</option>
+              <option>120 minutes</option>
+              <option>Close</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="water__container">
+          <h1 class="settings__title">Please Set Your Daily Goal:</h1>
+          <img
+            src="images/water cup.jpg"
+            alt="water cup"
+            class="img__waterCup_1"
+            id="cup"
+          />
+          <img
+            src="images/water cup.jpg"
+            alt="water cup"
+            class="img__waterCup_2"
+            id="cup"
+          />
+          <img
+            src="images/water cup.jpg"
+            alt="water cup"
+            class="img__waterCup_3"
+            id="cup"
+          />
+          <img
+            src="images/water cup.jpg"
+            alt="water cup"
+            class="img__waterCup_4"
+            id="cup"
+          />
+          <img
+            src="images/water cup.jpg"
+            alt="water cup"
+            class="img__waterCup_5"
+            id="cup"
+          />
+          <img
+            src="images/water cup.jpg"
+            alt="water cup"
+            class="img__waterCup_6"
+            id="cup"
+          />
+          <img
+            src="images/water cup.jpg"
+            alt="water cup"
+            class="img__waterCup_7"
+            id="cup"
+          />
+          <img
+            src="images/water cup.jpg"
+            alt="water cup"
+            class="img__waterCup_8"
+            id="cup"
+          />
+          <img
+            src="images/water cup.jpg"
+            alt="water cup"
+            class="img__waterCup_9"
+            id="cup"
+          />
+          <img
+            src="images/water cup.jpg"
+            alt="water cup"
+            class="img__waterCup_10"
+            id="cup"
+          />
+        </div>
+        <div>
+          <p>You Will Drink: <a id="clicks">0</a> ML Water Today.</p>
+        </div>
+        <div class="settings__button">
+          <button class="btn__home" type="button" onclick="more()">
+            More +
+          </button>
+          <button class="btn__home" type="button" onclick="less()">
+            Less -
+          </button>
+        </div>
+      </div>
+
+      <div class="ready__button">
+        <a href="#"><button class="btn__ready">I'm Ready to Drink!</button></a>
+      </div>
+    </section>
+
+    <section id="bottom">
+      <div class="bottom__container">
+        <p class="bottom__rights">2022 HooHacks - All rights reserved</p>
+      </div>
+    </section>
+    <!--JS Script for Settings Page-->
+    <script>
+      let counter = 0;
+      let add = (function () {
+        return function () {
+          if (counter < 10) {
+            return (counter += 1);
+          }
+          return 10;
+        };
+      })();
+
+      function more() {
+        document.getElementById("clicks").innerHTML = add() * 250;
+      }
+
+      let minus = (function () {
+        return function () {
+          if (counter != 0) {
+            return (counter -= 1);
+          }
+          return 0;
+        };
+      })();
+      function less() {
+        document.getElementById("clicks").innerHTML = minus() * 250;
+      }
+    </script>
+  </body>
+</html>
