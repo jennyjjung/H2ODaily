@@ -115,6 +115,17 @@
       <div class="navbar__container"></div>
     </nav>
 
+    <nav id="navbar">
+      <div class="navbar__logo">
+        <a href="index.html"><img src="images/logo.png" id="navbar__logo" /></a>
+      </div>
+      <div class="navbar__menu">
+        <li class="navbar__menu__item"><a href="index.html">Home</a></li>
+        <li class="navbar__menu__item"><a href="about.html">About</a></li>
+        <li class="navbar__menu__item"><a href="contact.html">Contact</a></li>
+      </div>
+    </nav>
+
     <section id="home">
       <div class="home__container">
         <div class="time__container">
@@ -138,7 +149,7 @@
         </div>
         <br />
         <br />
-        <div>
+        <div id="water">
           <p>You Will Drink: <a id="clicks">0</a> ML Water Today.</p>
         </div>
         <div class="settings__button">
@@ -161,34 +172,5 @@
         <p class="bottom__rights">2022 HooHacks - All rights reserved</p>
       </div>
     </section>
-    <!--JS Script for Settings Page-->
-    <script>
-      // To add/delete water amount
-      let counter = 0;
-      let add = (function () {
-        return function () {
-          if (counter < 10) {
-            return (counter += 1);
-          }
-          return 10;
-        };
-      })();
-
-      function more() {
-        document.getElementById("clicks").innerHTML = add() * 250;
-      }
-
-      let minus = (function () {
-        return function () {
-          if (counter != 0) {
-            return (counter -= 1);
-          }
-          return 0;
-        };
-      })();
-      function less() {
-        document.getElementById("clicks").innerHTML = minus() * 250;
-      }
-    </script>
   </body>
 </html>
