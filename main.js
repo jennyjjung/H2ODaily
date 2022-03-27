@@ -111,9 +111,9 @@ submit.addEventListener("click", drinkWater);
 
 //Modal 
 
-
-const timer = setTimeout(openModel, 5000);
-const close =document.getElementById('okay__btn');
+let modal = document.getElementById("modal__container");
+const timer = setTimeout(openModel, timeCount);
+const close = document.getElementById('okay__btn');
 
 
 var currentTime; 
@@ -129,7 +129,7 @@ function closeModel() {
 
 }
 
-document.getElementById("okay__btn").addEventListener("click", closeModel);
+close.addEventListener("click", closeModel);
 
 function restartTimer() {
     if (currentTime == (new Date().getTime() / 1000 / 60) - 1) {

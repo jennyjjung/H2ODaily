@@ -17,6 +17,7 @@
     <script src="main.js" defer></script>
 
     <style>
+      
       .reminder__container {
         display: flex;
         flex-wrap: wrap;
@@ -55,10 +56,15 @@
         color: var(--color-dark-grey);
         font-size: var(--font-medium);
       }
-
+      @media(min-width:992px) and (max-width:1199px) {
+        .modal__container {
+          float:center; 
+        }
+      }
       .modal__container {
         background-color: rgba(0, 0, 0, 0.3);
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
         justify-content: center;
         position: fixed;
@@ -66,9 +72,10 @@
         pointer-events: none;
         top: 0;
         left: 0;
-        height: 100vh;
-        width: 200vh;
+        height: 100%;
+        width:100%;
       }
+      
       .modal__content {
         background-color: whitesmoke;
         width: 600px;
@@ -136,6 +143,7 @@
       }
     </style>
   </head>
+  
   <body>
     <nav id="navbar">
       <div class="navbar__logo">
@@ -152,7 +160,7 @@
       <div class="para__container">
         <h1>Have you drank your water today?</h1>
       </div>
-
+      
       <div class="modal__container" id="modal__container">
         <div class="modal__content" id="modal__content">
           <h1>Time to drink your water! &#128167;</h1>
