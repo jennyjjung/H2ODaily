@@ -67,7 +67,7 @@ a {
 
 .navbar__menu {
   display: flex;
-  margin-right: 25px;
+  margin-left: 25px;
 }
 
 .navbar__logo {

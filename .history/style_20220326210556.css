@@ -67,7 +67,7 @@ a {
 
 .navbar__menu {
   display: flex;
-  margin-right: 25px;
+  margin-left: 25px;
 }
 
 .navbar__logo {
@@ -84,7 +84,7 @@ a {
 
 .navbar__menu__item {
   padding: 8px 12px;
-  margin: 0 10px;
+  margin: 0 4px;
   cursor: pointer;
   border-radius: var(--size-border-radius);
 }
@@ -157,7 +157,7 @@ input[type="submit"] {
 form {
   width: 500px;
   margin: auto;
-  margin-top: 50px;
+  margin-top: 20px;
 }
 .row {
   display: flex;
@@ -186,4 +186,15 @@ textarea {
 
 .table__input {
   width: 70%;
+}
+
+input[type="submit"] {
+  color: var(--color-dark-grey);
+  background-color: var(--color-blue);
+  font-size: var(--font-regular);
+  font-weight: var(--weight-bold);
+  font-family: "Unica One";
+  margin: 24px;
+  padding: 8px 16px;
+  border-radius: var(--size-border-radius);
 }
