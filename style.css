@@ -52,7 +52,7 @@ p {
 
 /* Home */
 #home {
-  padding: 120px 40px;
+  padding: 90px 40px;
   text-align: center;
 }
 
@@ -67,8 +67,8 @@ p {
 }
 
 .home__logo {
-  width: 250px;
-  height: 250px;
+  width: 350px;
+  height: 350px;
 }
 
 .btn__home {
@@ -91,4 +91,17 @@ p {
   padding: 20px;
   text-align: center;
   height: 50px;
+  width: 100%;
+}
+
+.bottom__rights {
+    font-size: var(--font-micro);
+}
+
+.logo {
+  width: 90px;
+  height:40px;
+  position: absolute;
+  top: 10px;; 
+  left: 0px;
 }

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>H2O Daily</title>
+  <link href='https://fonts.googleapis.com/css?family=Unica One' rel='stylesheet'>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <script src="main.js" defer></script>
+
+  <style>
+      img {
+          width:100px; 
+          height:100px; 
+        }
+      .reminder__container {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;     
+        }
+        .checkmark__container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;  
+            margin: 10px 0px 20px 0px;
+        }
+        .checkbox {
+            margin: 5px 43px 20px 45px;
+        }
+        .para__container {
+            text-align: center;
+            padding: 10px;
+            font-size: var(--font-regular);
+            font-weight: var(--weight-bold);
+        }
+
+        .submit {
+            color: var(--color-dark-grey);
+            background-color: var(--color-blue);
+            font-size: var(--font-regular);
+            font-weight: var(--weight-bold);
+            font-family: "Unica One";
+            border-radius: 5px;
+            border-color: var(--color-blue);
+            display: block;
+            margin:auto;
+
+        }
+  </style>
+</head>
+<body>
+
+  <nav id="navbar">
+    <div class="navbar__container">
+      <img src="images/logo.png" alt="H2O daily Logo" class="logo"/>
+    </div>
+  </nav>
+
+  <section id="reminder">
+    <div class="para__container">
+      <p> Water  </p>
+    </div>
+
+    <div class= "reminder__container" id="reminder__container">
+      <!--watercup images-->
+    </div>
+
+    <div class="checkmark__container">
+      <!--checkboxes-->  
+      <input type="button" value="I drank!" id="submit" class="submit"/>
+    </div>
+
+
+  </section>
+
+  <section id="bottom">
+    <div class= "bottom__container">
+      <p class="bottom__rights">&copy; Team Hamstarz 2022 HooHacks - All rights reserved</p>
+    </div>
+  </section>
+  <a href="setting.html">Setting</a>
+</body>
+</html>
