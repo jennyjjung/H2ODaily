@@ -1,7 +1,7 @@
 # H2O Daily
 
 ## Inspiration
-Nearly all of us have a hard time keeping track of things in our daily life. Thus, the idea of an alarm to wake us up and a pill organizer to take medicines. We also wanted to encourage and remind all of the basic necessity of proper hydration.
+Nearly all of us have a hard time keeping track of things in our daily life. Thus, the idea of an alarm to wake us up and a pill organizer to take medicines. We also wanted to encourage and remind everyone of the basic necessity of proper hydration.
 
 ## What it does
 H2O DAILY is a simple hydration tracker that reminds the user to drink water throughout the day. The user will first choose the amount of water that they aim to drink for the day. After, they will receive an alert at chosen intervals to keep hydrated. This simple and user-friendly system will allow the users to help reach their daily hydration goal. 
