@@ -76,8 +76,8 @@ a {
   justify-content: center;
 }
 
-#nevbar__logo {
-  width: 80px;
+.navbar__bottle {
+  width: 50px;
   padding-left: 20px;
   padding-top: 10px;
 }
@@ -116,8 +116,8 @@ a {
 }
 
 .home__logo {
-  width: 300px;
-  height: 300px;
+  width: 250px;
+  height: 250px;
   margin: 20px;
   margin-bottom: 0;
 }

@@ -54,6 +54,26 @@ a {
   color: var(--color-dark-grey);
 }
 
+blockquote {
+  padding: 5%;
+  color: var(--color-dark-grey);
+  font-style: italic;
+  line-height: 145%;
+  position: relative;
+  margin-top: 40px;
+  width: 500px;
+  margin-right: 0;
+}
+
+blockquote:before {
+  content: "\201C";
+  font-size: 400%;
+  display: block;
+  position: absolute;
+  top: -5px;
+  left: -3px;
+}
+
 /* Navbar */
 #navbar {
   position: fixed;
@@ -76,8 +96,8 @@ a {
   justify-content: center;
 }
 
-#nevbar__logo {
-  width: 80px;
+.navbar__bottle {
+  width: 50px;
   padding-left: 20px;
   padding-top: 10px;
 }
@@ -105,6 +125,8 @@ a {
 }
 
 .home__content {
+  display: flex;
+  padding-top: 30px;
   width: 80%;
 }
 
@@ -116,10 +138,9 @@ a {
 }
 
 .home__logo {
-  width: 300px;
-  height: 300px;
-  margin: 20px;
-  margin-bottom: 0;
+  width: 250px;
+  height: 250px;
+  margin: 40px;
 }
 
 .btn__home {
@@ -146,7 +167,7 @@ a {
 
 .about__content,
 .contact__content {
-  width: 70%;
+  width: 80%;
   text-align: center;
-  margin: auto;
+  margin: 0;
 }

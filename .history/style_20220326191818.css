@@ -28,6 +28,7 @@ body {
   font-family: "Open Sans";
   cursor: default;
   text-align: center;
+  width: 90%;
 }
 
 h1 {
@@ -54,6 +55,24 @@ a {
   color: var(--color-dark-grey);
 }
 
+blockquote {
+  padding: 5%;
+  color: var(--color-dark-grey);
+  font-style: italic;
+  line-height: 145%;
+  position: relative;
+  margin-top: 40px;
+}
+
+blockquote:before {
+  content: "\201C";
+  font-size: 400%;
+  display: block;
+  position: absolute;
+  top: -5px;
+  left: -3px;
+}
+
 /* Navbar */
 #navbar {
   position: fixed;
@@ -76,8 +95,8 @@ a {
   justify-content: center;
 }
 
-#nevbar__logo {
-  width: 80px;
+.navbar__bottle {
+  width: 50px;
   padding-left: 20px;
   padding-top: 10px;
 }
@@ -105,21 +124,19 @@ a {
 }
 
 .home__content {
-  width: 80%;
+  display: flex;
+  padding: 30px;
 }
 
 .home__container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
 }
 
 .home__logo {
-  width: 300px;
-  height: 300px;
-  margin: 20px;
-  margin-bottom: 0;
+  width: 250px;
+  height: 250px;
 }
 
 .btn__home {
@@ -142,11 +159,4 @@ a {
   padding: 20px;
   text-align: center;
   height: 50px;
-}
-
-.about__content,
-.contact__content {
-  width: 70%;
-  text-align: center;
-  margin: auto;
 }

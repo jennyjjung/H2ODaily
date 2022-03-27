@@ -34,7 +34,6 @@ h1 {
   font-size: var(--font-large);
   font-weight: var(--weight-bold);
   color: var(--color-dark-grey);
-  font-family: "Unica One";
   margin: 16px 0px;
 }
 
@@ -67,7 +66,6 @@ a {
 
 .navbar__menu {
   display: flex;
-  margin-left: 25px;
 }
 
 .navbar__logo {
@@ -76,8 +74,8 @@ a {
   justify-content: center;
 }
 
-#nevbar__logo {
-  width: 80px;
+.navbar__bottle {
+  width: 50px;
   padding-left: 20px;
   padding-top: 10px;
 }
@@ -94,9 +92,7 @@ a {
 }
 
 /* Home */
-#home,
-#contact,
-#about {
+#home {
   padding: 150px 40px 100px 40px;
 }
 
@@ -104,22 +100,15 @@ a {
   color: var(--color-dark-grey);
 }
 
-.home__content {
-  width: 80%;
-}
-
 .home__container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
 }
 
 .home__logo {
-  width: 300px;
-  height: 300px;
-  margin: 20px;
-  margin-bottom: 0;
+  width: 250px;
+  height: 250px;
 }
 
 .btn__home {
@@ -144,9 +133,12 @@ a {
   height: 50px;
 }
 
-.about__content,
-.contact__content {
-  width: 70%;
-  text-align: center;
-  margin: auto;
+/* About */
+#about {
+  padding: 50px 40px 120px 40px;
+}
+
+/* Contact */
+#contact {
+  padding: 50px 40px 120px 40px;
 }

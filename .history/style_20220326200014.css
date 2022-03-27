@@ -76,8 +76,8 @@ a {
   justify-content: center;
 }
 
-#nevbar__logo {
-  width: 80px;
+.navbar__bottle {
+  width: 50px;
   padding-left: 20px;
   padding-top: 10px;
 }
@@ -105,6 +105,7 @@ a {
 }
 
 .home__content {
+  display: flex;
   width: 80%;
 }
 
@@ -116,10 +117,9 @@ a {
 }
 
 .home__logo {
-  width: 300px;
-  height: 300px;
-  margin: 20px;
-  margin-bottom: 0;
+  width: 250px;
+  height: 250px;
+  margin: 40px;
 }
 
 .btn__home {

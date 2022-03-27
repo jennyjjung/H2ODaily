@@ -34,7 +34,6 @@ h1 {
   font-size: var(--font-large);
   font-weight: var(--weight-bold);
   color: var(--color-dark-grey);
-  font-family: "Unica One";
   margin: 16px 0px;
 }
 
@@ -52,6 +51,23 @@ li {
 a {
   text-decoration: none;
   color: var(--color-dark-grey);
+}
+
+blockquote {
+  padding: 2%;
+  font-style: italic;
+  line-height: 145%;
+  position: relative;
+  margin-top: 40px;
+}
+
+blockquote:before {
+  content: "\201C";
+  font-size: 500%;
+  display: block;
+  position: absolute;
+  top: -5px;
+  left: -3px;
 }
 
 /* Navbar */
@@ -76,8 +92,8 @@ a {
   justify-content: center;
 }
 
-#nevbar__logo {
-  width: 80px;
+.navbar__bottle {
+  width: 50px;
   padding-left: 20px;
   padding-top: 10px;
 }
@@ -104,22 +120,15 @@ a {
   color: var(--color-dark-grey);
 }
 
-.home__content {
-  width: 80%;
-}
-
 .home__container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
 }
 
 .home__logo {
-  width: 300px;
-  height: 300px;
-  margin: 20px;
-  margin-bottom: 0;
+  width: 250px;
+  height: 250px;
 }
 
 .btn__home {
@@ -142,11 +151,4 @@ a {
   padding: 20px;
   text-align: center;
   height: 50px;
-}
-
-.about__content,
-.contact__content {
-  width: 70%;
-  text-align: center;
-  margin: auto;
 }
