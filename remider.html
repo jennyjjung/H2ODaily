@@ -1,130 +1,199 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>H2O Daily</title>
-  <link href='https://fonts.googleapis.com/css?family=Unica One' rel='stylesheet'>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
-  <script src="main.js" defer></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>H2O Daily</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Unica One"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="main.js" defer></script>
 
-  <style>
-      
+    <style>
       .reminder__container {
-          display: flex;
-          flex-wrap: wrap;
-          justify-content: center;     
-        }
-        .checkmark__container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;  
-            margin: 10px 0px 20px 0px;
-        }
-        .checkbox {
-            margin: 5px 43px 20px 45px;
-        }
-        .para__container {
-            text-align: center;
-            padding: 10px;
-            font-size: var(--font-regular);
-            font-weight: var(--weight-bold);
-        }
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .checkmark__container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 10px 0px 20px 0px;
+      }
+      .checkbox {
+        margin: 5px 43px 20px 45px;
+      }
+      .para__container {
+        text-align: center;
+        padding: 10px;
+        font-size: var(--font-regular);
+        font-weight: var(--weight-bold);
+      }
 
-        .submit {
-            color: var(--color-dark-grey);
-            background-color: var(--color-blue);
-            font-size: var(--font-regular);
-            font-weight: var(--weight-bold);
-            font-family: "Unica One";
-            border-radius: 5px;
-            border-color: var(--color-blue);
-            display: block;
-            margin: 50px auto;
-        }
+      .submit {
+        color: var(--color-dark-grey);
+        background-color: var(--color-blue);
+        font-size: var(--font-regular);
+        font-weight: var(--weight-bold);
+        font-family: "Unica One";
+        border-radius: 5px;
+        border-color: var(--color-blue);
+        display: block;
+        margin: 50px auto;
+      }
 
-        h1 {
-          font-family: "Unica One";
-          color: var(--color-dark-grey);
-          font-size: var(--font-medium);
-        }
-        
-        .modal__container {
-          position: fixed; 
-          display: block;
-          margin: auto;
-          justify-content: center;
-          align-items: center;
-          width: 500px;
-          height: 300px;
-          background-color: aliceblue;
-          border-radius: 10px;
-          opacity: 0;
-          pointer-events: none;
-        }
+      h1 {
+        font-family: "Unica One";
+        color: var(--color-dark-grey);
+        font-size: var(--font-medium);
+      }
 
-        .modal__container.show {
-          pointer-events: auto;
-          opacity: 1;
-        }
+      .modal__container {
+        background-color: rgba(0, 0, 0, 0.3);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        opacity: 0;
+        pointer-events: none;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 200vh;
+      }
+      .modal__content {
+        background-color: whitesmoke;
+        width: 600px;
+        height: 290px;
+        padding: 40px 40px;
+        max-width: 100%;
+        border-radius: 10px;
+        text-align: center;
+      }
 
-        .okay__btn {
-          margin: 5px 5px 20px 5px;
-          display: block;
-          margin:10px auto;
-        }
-        
-  </style>
-</head>
-<body>
-  
-  <nav id="navbar">
-    <div class="navbar__logo">
-      <a href="index.html"><img src="images/logo.png" id="navbar__logo" /></a>
-    </div>
-    <div class="navbar__menu">
-      <li class="navbar__menu__item"><a href="index.html">Home</a></li>
-      <li class="navbar__menu__item"><a href="about.html">About</a></li>
-      <li class="navbar__menu__item"><a href="contact.html">Contact</a></li>
-    </div>
-  </nav>
+      .modal__container.show {
+        pointer-events: auto;
+        opacity: 1;
+      }
 
-  <section id="home">
-   
+      .okay__btn {
+        color: var(--color-dark-grey);
+        background-color: var(--color-white);
+        font-size: var(--font-regular);
+        font-weight: var(--weight-bold);
+        font-family: "Unica One";
+        margin: 40px;
+        padding: 8px 16px;
+        border-radius: var(--size-border-radius);
+        box-shadow: 2px 2px 2px 2px rgb(66, 66, 66, 0.3);
+        width: 220px;
+      }
+
+      .okay__btn:hover {
+        color: var(--color-dark-blue);
+        background-color: var(--color-dark-grey);
+      }
+
+      .submit_water {
+        color: var(--color-dark-grey);
+        background-color: var(--color-blue);
+        font-size: var(--font-regular);
+        font-weight: var(--weight-bold);
+        font-family: "Unica One";
+        margin: auto;
+
+        padding: 8px 16px;
+        border-radius: var(--size-border-radius);
+      }
+
+      .submit_water:hover {
+        background-color: var(--color-dark-blue);
+      }
+
+      .submit_more {
+        color: var(--color-dark-grey);
+        background-color: var(--color-white);
+        font-size: var(--font-regular);
+        font-weight: var(--weight-bold);
+        font-family: "Unica One";
+        margin: auto;
+
+        padding: 8px 16px;
+        border-radius: var(--size-border-radius);
+      }
+
+      .submit_more:hover {
+        color: var(--color-blue);
+        background-color: var(--color-dark-grey);
+      }
+    </style>
+  </head>
+  <body>
+    <nav id="navbar">
+      <div class="navbar__logo">
+        <a href="index.html"><img src="images/logo.png" id="navbar__logo" /></a>
+      </div>
+      <div class="navbar__menu">
+        <li class="navbar__menu__item"><a href="index.html">Home</a></li>
+        <li class="navbar__menu__item"><a href="about.html">About</a></li>
+        <li class="navbar__menu__item"><a href="contact.html">Contact</a></li>
+      </div>
+    </nav>
+
+    <section id="home">
       <div class="para__container">
-        <h1> Have you drank your water today? </h1>
+        <h1>Have you drank your water today?</h1>
       </div>
 
       <div class="modal__container" id="modal__container">
         <div class="modal__content" id="modal__content">
-          <h1>Time to drink your water!</h1>
-          <p>Hammy is here to let you know that it is time to drink your water 
-            to stay hydrated throughout the day! Please drink a cup of water 
-            and check off the water cup you drank!
+          <h1>Time to drink your water! &#128167;</h1>
+          <p>
+            Hammy is here to let you know that it is time to drink your water to
+            stay hydrated throughout the day! Please drink a cup of water and
+            check off the water cup you drank!
           </p>
+          <input type="button" value="Okay!" id="okay__btn" class="okay__btn" />
         </div>
-        <input type="button" value="Okay!" id="okay__btn" class="okay__btn"/>
       </div>
 
-      <div class= "reminder__container" id="reminder__container">
+      <div class="reminder__container" id="reminder__container">
         <!--watercup images-->
       </div>
 
       <div class="checkmark__container" id="checkmark__container">
-        <!--checkboxes-->  
-        
+        <!--checkboxes-->
       </div>
 
-      <input type="button" value="I drank!" id="submit" class="submit"/>
-  
-  </section>
+      <input
+        type="button"
+        value="Yes I drank it!"
+        id="submit"
+        class="submit_water"
+      />
+      <br />
+      <br />
+      <input
+        type="button"
+        value="I want more!"
+        id="submit"
+        class="submit_more"
+        onclick="location.href='settings.html';"
+      />
+    </section>
 
-  <section id="bottom">
-    <div class="bottom__container">
-      <p class="bottom__rights">2022 HooHacks - All rights reserved</p>
-    </div>
-  </section>
-</body>
+    <section id="bottom">
+      <div class="bottom__container">
+        <p class="bottom__rights">2022 HooHacks - All rights reserved</p>
+      </div>
+    </section>
+  </body>
 </html>
