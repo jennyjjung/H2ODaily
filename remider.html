@@ -11,10 +11,7 @@
   <script src="main.js" defer></script>
 
   <style>
-      img {
-          width:100px; 
-          height:100px; 
-        }
+      
       .reminder__container {
           display: flex;
           flex-wrap: wrap;
@@ -47,6 +44,12 @@
             display: block;
             margin: 50px auto;
         }
+
+        h1 {
+          font-family: "Unica One";
+          color: var(--color-dark-grey);
+          font-size: var(--font-medium);
+        }
   </style>
 </head>
 <body>
@@ -62,22 +65,23 @@
     </div>
   </nav>
 
-  <section id="reminder">
-    <div class="para__container">
-      <p> Water  </p>
-    </div>
+  <section id="home">
+   
+      <div class="para__container">
+        <h1> Have you drank your water today? </h1>
+      </div>
 
-    <div class= "reminder__container" id="reminder__container">
-      <!--watercup images-->
-    </div>
+      <div class= "reminder__container" id="reminder__container">
+        <!--watercup images-->
+      </div>
 
-    <div class="checkmark__container" id="checkmark__container">
-      <!--checkboxes-->  
-      
-    </div>
+      <div class="checkmark__container" id="checkmark__container">
+        <!--checkboxes-->  
+        
+      </div>
 
-    <input type="button" value="I drank!" id="submit" class="submit"/>
-
+      <input type="button" value="I drank!" id="submit" class="submit"/>
+  
   </section>
 
   <section id="bottom">
