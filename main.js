@@ -112,8 +112,8 @@ submit.addEventListener("click", drinkWater);
 //Modal 
 
 
-let modal = document.getElementById("modal__container");
-const timer = setTimeout(openModel, parseInt(timeCount));
+const timer = setTimeout(openModel, 5000);
+const close =document.getElementById('okay__btn');
 
 
 var currentTime; 
