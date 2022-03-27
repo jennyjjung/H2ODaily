@@ -54,6 +54,26 @@ a {
   color: var(--color-dark-grey);
 }
 
+blockquote {
+  padding: 5%;
+  color: var(--color-dark-grey);
+  font-style: italic;
+  line-height: 145%;
+  position: relative;
+  margin-top: 40px;
+  width: 500px;
+  margin-right: 0;
+}
+
+blockquote:before {
+  content: "\201C";
+  font-size: 400%;
+  display: block;
+  position: absolute;
+  top: -5px;
+  left: -3px;
+}
+
 /* Navbar */
 #navbar {
   position: fixed;
@@ -67,7 +87,7 @@ a {
 
 .navbar__menu {
   display: flex;
-  margin-right: 25px;
+  margin-left: 25px;
 }
 
 .navbar__logo {
@@ -76,15 +96,15 @@ a {
   justify-content: center;
 }
 
-#nevbar__logo {
-  width: 80px;
+.navbar__bottle {
+  width: 50px;
   padding-left: 20px;
   padding-top: 10px;
 }
 
 .navbar__menu__item {
   padding: 8px 12px;
-  margin: 0 10px;
+  margin: 0 4px;
   cursor: pointer;
   border-radius: var(--size-border-radius);
 }
@@ -105,6 +125,7 @@ a {
 }
 
 .home__content {
+  display: flex;
   width: 80%;
 }
 
@@ -116,14 +137,12 @@ a {
 }
 
 .home__logo {
-  width: 300px;
-  height: 300px;
-  margin: 20px;
-  margin-bottom: 0;
+  width: 250px;
+  height: 250px;
+  margin: 40px;
 }
 
-.btn__home,
-input[type="submit"] {
+.btn__home {
   color: var(--color-dark-grey);
   background-color: var(--color-blue);
   font-size: var(--font-regular);
@@ -134,8 +153,7 @@ input[type="submit"] {
   border-radius: var(--size-border-radius);
 }
 
-.btn__home:hover,
-input[type="submit"]:hover {
+.btn__home:hover {
   background-color: var(--color-dark-blue);
 }
 
@@ -144,76 +162,11 @@ input[type="submit"]:hover {
   padding: 20px;
   text-align: center;
   height: 50px;
-  width: 100%;
 }
 
-.bottom__rights {
-    font-size: var(--font-micro);
-}
-
-.logo {
-  width: 90px;
-  height:40px;
-  position: absolute;
-  top: 10px;; 
-  left: 0px;
-}
-
-/* About */
 .about__content,
 .contact__content {
   width: 70%;
   text-align: center;
-  margin: 50px auto;
-}
-
-.about__content {
-  display: flex;
-}
-
-#hamstarz {
-  width: 250px;
-}
-
-#about__hamstarz {
-  text-align: left;
-}
-
-#about__hamstarz::first-letter {
-  font-size: var(--font-medium);
-}
-
-/* Contact */
-form {
-  width: 500px;
   margin: auto;
-  margin-top: 50px;
-}
-.row {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 10px;
-}
-
-input[type="text"],
-input[type="email"],
-textarea {
-  width: 100%;
-  padding: 7px;
-  border-radius: 3px;
-  border: 1px solid rgb(207, 207, 207);
-}
-
-textarea {
-  height: 100px;
-}
-
-.table__label {
-  width: 30%;
-  text-align: left;
-  line-height: 150%;
-}
-
-.table__input {
-  width: 70%;
 }

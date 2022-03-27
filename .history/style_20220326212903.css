@@ -135,7 +135,7 @@ input[type="submit"] {
 }
 
 .btn__home:hover,
-input[type="submit"]:hover {
+input[type="submit"] {
   background-color: var(--color-dark-blue);
 }
 
@@ -144,19 +144,6 @@ input[type="submit"]:hover {
   padding: 20px;
   text-align: center;
   height: 50px;
-  width: 100%;
-}
-
-.bottom__rights {
-    font-size: var(--font-micro);
-}
-
-.logo {
-  width: 90px;
-  height:40px;
-  position: absolute;
-  top: 10px;; 
-  left: 0px;
 }
 
 /* About */
@@ -180,7 +167,7 @@ input[type="submit"]:hover {
 }
 
 #about__hamstarz::first-letter {
-  font-size: var(--font-medium);
+  font-size: var(--size-medium);
 }
 
 /* Contact */

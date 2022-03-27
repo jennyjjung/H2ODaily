@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>H2O Daily</title>
+  <link href='https://fonts.googleapis.com/css?family=Unica One' rel='stylesheet'>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <script src="main.js" defer></script>
+</head>
+<body>
+
+  <nav id="navbar">
+    <div class="navbar__logo">
+      <a href="index.html"><img src="images/logo.png" id="navbar__logo"></a>
+    </div>
+    <div class="navbar__menu">
+      <li class="navbar__menu__item"><a href="index.html">Home</a></li>
+      <li class="navbar__menu__item"><a href="about.html">About</a></li>
+      <li class="navbar__menu__item"><a href="contact.html">Contact</a></li>
+    </div>
+  </nav>
+
+  <section id="contact">
+    <h1>We're happy to hear from you</h1>
+    <div class="contact__content">
+      <form method="post" action="#" class="contact-form">
+        <div class="row">
+          <div class="table__label">
+            <label for="name">Name</label>
+          </div>
+          <div class="table__input">
+            <input type="text" name="name" id="name" placeholder="Your name" required>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="table__label">
+            <label for="email">Email</label>
+          </div>
+          <div class="table__input">
+            <input type="email" name="email" id="email" placeholder="Your Email" required>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="table__label">
+            <label>Drop us a line</label>
+          </div>
+          <div class="table__input">
+            <textarea name="message" placeholder="Your message"></textarea>
+          </div>
+        </div>
+
+
+          <input type="submit" value="Send it!">
+  
+      </form>
+    </div>
+  </section>
+
+  <section id="bottom">
+    <div class= "bottom__container">
+      <p class="bottom__rights">2022 HooHacks - All rights reserved</p>
+    </div>
+  </section>
+  
+</body>
+</html>
