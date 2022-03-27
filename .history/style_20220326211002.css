@@ -67,7 +67,7 @@ a {
 
 .navbar__menu {
   display: flex;
-  margin-right: 25px;
+  margin-left: 25px;
 }
 
 .navbar__logo {
@@ -135,7 +135,7 @@ input[type="submit"] {
 }
 
 .btn__home:hover,
-input[type="submit"]:hover {
+input[type="submit"] {
   background-color: var(--color-dark-blue);
 }
 
@@ -146,28 +146,11 @@ input[type="submit"]:hover {
   height: 50px;
 }
 
-/* About */
 .about__content,
 .contact__content {
   width: 70%;
   text-align: center;
-  margin: 50px auto;
-}
-
-.about__content {
-  display: flex;
-}
-
-#hamstarz {
-  width: 250px;
-}
-
-#about__hamstarz {
-  text-align: left;
-}
-
-#about__hamstarz::first-letter {
-  font-size: var(--font-medium);
+  margin: auto;
 }
 
 /* Contact */

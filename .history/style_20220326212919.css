@@ -135,7 +135,7 @@ input[type="submit"] {
 }
 
 .btn__home:hover,
-input[type="submit"]:hover {
+input[type="submit"] {
   background-color: var(--color-dark-blue);
 }
 
