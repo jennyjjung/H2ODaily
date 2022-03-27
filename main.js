@@ -41,7 +41,8 @@ function loadImg() {
         waterImage.setAttribute("height", "100px");
         waterImage.setAttribute("id", "water" + waterCount);
         imageDiv.appendChild(waterImage); 
-        localStorage.setItem("waterCount", waterCount)
+        localStorage.setItem("waterCount", waterCount);
+        getDropDownValue();
     }
             
 }
@@ -50,7 +51,15 @@ function removeImg() {
     let waterImage = document.getElementById("water" + waterCount);
     imageDiv.removeChild(waterImage); 
     waterCount--; 
-    localStorage.setItem("waterCount", waterCount)
+    localStorage.setItem("waterCount", waterCount);
+    getDropDownValue();
+}
+ 
+
+function getDropDownValue() {
+    let dropdown = document.getElementById("dd__list");
+    var timeHello = dropdown.options[dropdown.selectedIndex].value;  
+    localStorage.setItem("time", timeHello);
 }
 
 //reminder.html
@@ -61,6 +70,7 @@ let submit = document.getElementById("submit");
 let reminderDiv = document.getElementById("reminder__container");
 let checkBoxDiv = document.getElementById("checkmark__container");
 var wCount = localStorage.getItem("waterCount"); 
+var timeCount = localStorage.getItem("time"); 
 
 
 function applyImg() {
@@ -101,15 +111,16 @@ submit.addEventListener("click", drinkWater);
 
 //Modal 
 
-let modal = document.getElementById("modal__container");
 
-const timer = setTimeout(openModel, 5000);
+let modal = document.getElementById("modal__container");
+const timer = setTimeout(openModel, parseInt(timeCount));
 
 
 var currentTime; 
 
 function openModel() {
     modal.classList.add("show");
+    document.getElementById("hello").innerHTML = timeCount;
 }
 
 function closeModel() {
