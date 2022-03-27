@@ -112,27 +112,17 @@ submit.addEventListener("click", drinkWater);
 //Modal 
 
 let modal = document.getElementById("modal__container");
-const timer = setTimeout(openModel, timeCount);
 const close = document.getElementById('okay__btn');
 
-
-var currentTime; 
-
-function openModel() {
+const timer = setInterval(function() {
     modal.classList.add("show");
-    document.getElementById("hello").innerHTML = timeCount;
-}
+    }, timeCount);
+
 
 function closeModel() {
     modal.classList.remove("show");
-    currentTime = new Date().getTime() / 1000 / 60;
-
 }
 
 close.addEventListener("click", closeModel);
 
-function restartTimer() {
-    if (currentTime == (new Date().getTime() / 1000 / 60) - 1) {
-        openModel();
-    }
-}
+
