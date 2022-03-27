@@ -62,6 +62,7 @@ let reminderDiv = document.getElementById("reminder__container");
 let checkBoxDiv = document.getElementById("checkmark__container");
 var wCount = localStorage.getItem("waterCount"); 
 
+
 function applyImg() {
     
     for (let i = 0; i < wCount; i++) {
@@ -99,8 +100,11 @@ function drinkWater() {
 submit.addEventListener("click", drinkWater);
 
 //Modal 
+
 let modal = document.getElementById("modal__container");
+
 const timer = setTimeout(openModel, 5000);
+
 
 var currentTime; 
 
@@ -110,7 +114,14 @@ function openModel() {
 
 function closeModel() {
     modal.classList.remove("show");
+    currentTime = new Date().getTime() / 1000 / 60;
+
 }
 
 document.getElementById("okay__btn").addEventListener("click", closeModel);
 
+function restartTimer() {
+    if (currentTime == (new Date().getTime() / 1000 / 60) - 1) {
+        openModel();
+    }
+}
