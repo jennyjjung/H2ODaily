@@ -97,3 +97,20 @@ function drinkWater() {
  }
 
 submit.addEventListener("click", drinkWater);
+
+//Modal 
+let modal = document.getElementById("modal__container");
+const timer = setTimeout(openModel, 5000);
+
+var currentTime; 
+
+function openModel() {
+    modal.classList.add("show");
+}
+
+function closeModel() {
+    modal.classList.remove("show");
+}
+
+document.getElementById("okay__btn").addEventListener("click", closeModel);
+

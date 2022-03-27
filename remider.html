@@ -50,6 +50,31 @@
           color: var(--color-dark-grey);
           font-size: var(--font-medium);
         }
+        
+        .modal__container {
+          position: fixed; 
+          display: block;
+          margin: auto;
+          justify-content: center;
+          align-items: center;
+          width: 500px;
+          height: 300px;
+          background-color: aliceblue;
+          border-radius: 10px;
+          opacity: 0;
+          pointer-events: none;
+        }
+
+        .modal__container.show {
+          pointer-events: auto;
+          opacity: 1;
+        }
+
+        .okay__btn {
+          margin: 5px 5px 20px 5px;
+          display: block;
+          margin:10px auto;
+        }
   </style>
 </head>
 <body>
@@ -69,6 +94,17 @@
    
       <div class="para__container">
         <h1> Have you drank your water today? </h1>
+      </div>
+
+      <div class="modal__container" id="modal__container">
+        <div class="modal__content" id="modal__content">
+          <h1>Time to drink your water!</h1>
+          <p>Hammy is here to let you know that it is time to drink your water 
+            to stay hydrated throughout the day! Please drink a cup of water 
+            and check off the water cup you drank!
+          </p>
+        </div>
+        <input type="button" value="Okay!" id="okay__btn" class="okay__btn"/>
       </div>
 
       <div class= "reminder__container" id="reminder__container">
